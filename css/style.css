@@ -1,0 +1,16 @@
+.hei{
+    height: 300px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+@media(max-width:575px){
+    .hei{
+        height: 43vw;
+    }
+    .fe{
+        font-size: 13px;
+    }
+}
