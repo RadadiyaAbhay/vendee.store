@@ -6,6 +6,12 @@ a{
     color: black;
 }
 
+.head-after{
+    background-color: rgba(0, 0, 0 , 0.8)!important;
+    position: sticky!important;
+    top:-2px!important;
+}
+
 @media(max-width:575px){
     .hei{
         height: 43vw;

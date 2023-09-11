@@ -8,22 +8,57 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/style.css">
 
 </head>
-<body >
-    <header class="bg-black">
+<body class="">
+
+    <!-- modal -->
+    <div class="offcanvas offcanvas-start " data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+        <div class="offcanvas-header " style="background-color: #E52E06;">
+            <h5 class="offcanvas-title text-white"  id="offcanvasWithBothOptionsLabel">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <nav>
+                <ul class="list-unstyled">
+                    <li class="py-1"><a href="#">Appliances</a></li>
+                    <li class="py-1"><a href="#">Apps & Games</a></li>
+                    <li class="py-1"><a href="#">Audible Audiobooks</a></li>
+                    <li class="py-1"><a href="#">Beauty</a></li>
+                    <li class="py-1"><a href="#">Books</a></li>
+                    <li class="py-1"><a href="#">Clothing & Accessories</a></li>
+                    <li class="py-1"><a href="#">Computers & Accessories</a></li>
+                    <li class="py-1"><a href="#">Electronics</a></li>
+                    <li class="py-1"><a href="#">Furniture</a></li>
+                    <li class="py-1"><a href="#">Home & Kitchen</a></li>
+                    <li class="py-1"><a href="#">Jewellery</a></li>
+                </ul>
+              </nav>
+            </div>
+        </div>
+
+
+
+    <header class="bg-black  z-3">
         <div class="container py-3">
-            <div class="row justify-content-center">
-                <div class="col-lg-2 col-5 col-md-3 d-flex justify-content-center"><img src="./images/logo.png" class="img-fluid" alt=""></div>
+            <div class="row justify-content-center" id="header1">
+
+                <div class="col-lg-2 col-3 col-md-4  d-flex justify-content-start align-items-center"><button class="btn " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i class="bi bi-list text-white fs-3"></i></button></div>
+                <div class="col-lg-8 col-6 col-md-4 d-flex justify-content-center"><img src="./images/logo.png" class="img-fluid col-md-8 col-sm-7 col-lg-3 " alt=""></div>
+                <div class="col-lg-2 col-3 col-md-4 d-flex justify-content-end align-items-center"  onclick="return search()"><i class="bi bi-search text-white fs-3"></i></div>
             </div>
         </div>
     </header>
 
 
-    <main>
-        <section class="py-5">
-            <div class="container">
+    <main onclick="return show1()">
+        <section class="py-md-5 py-3 ">
+            <div class="container ">
                 <div class="row" id="show">
 
                     
@@ -33,8 +68,24 @@
            
     </main>
 
-
+    
+    <script>
+        new WOW().init();
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script>
+	    $(window).scroll(function(){
+        if ($(window).scrollTop() >= 100) {
+            $('header').addClass('head-after');
+
+        }
+        else {
+           $('header').removeClass('head-after');
+        }
+
+        });
+    </script>
     <script src="js/script.js"  async></script>
 </body>
 </html>
