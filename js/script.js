@@ -124,8 +124,3 @@ var show12 = () => {
     <div class="col-lg-2 col-3 col-md-4 d-flex justify-content-end align-items-center" onclick="return search()"><i class="bi bi-search text-white fs-3"></i></div>
     `
 }
-
-
-  if(navigator.userAgent.includes("Instagram")){
-      window.location.href = "https://vendee.store"
-  }
